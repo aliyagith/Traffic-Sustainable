@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Futuristic Urban Traffic Analysis</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #000;
+      color: #fff;
+      font-family: 'Merriweather', serif;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+        padding: 20px;
+    }
+
+    /* Main Content */
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      padding: 20px;
+      opacity: 0;
+      animation: fadeIn 2.5s ease forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      line-height: 1.8;
+      color: #ddd;
+      margin-bottom: 2rem;
+    }
+
+    /* Navigation Button */
+    a {
+      text-decoration: none;
+      color: gold;
+      font-size: 1.1rem;
+      border: 1px solid gold;
+      padding: 10px 20px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+
+    a:hover {
+      background: gold;
+      color: black;
+      box-shadow: 0 0 15px gold;
+    }
+</style>
+</head>
+<body>
+<!-- Background Animated Stars -->
+<div class="stars"></div>
+
+<!-- About Content -->
+    <div class="content">
+        <h1>About This Project</h1>
+        <p>
+            This project is about Smart Urban Mobility and Futuristic Traffic Sustainability. 
+            The main goal is to make city travel easier, faster, and eco-friendly by using 
+            modern technologies such as smart traffic systems, electric vehicles, ride-sharing, 
+            data-driven planning. Our project focuses on reducing traffic jams, lowering 
+            pollution, and improving transport efficiency so that people can move safely and 
+            comfortably in urban areas. 
+        </p>
+
+    <a href="index.html">← Back to Home</a>
+</div>
+
+<!-- Script to Generate Stars -->
+<script>
+    const starsContainer = document.querySelector('.stars');
+    for (let i = 0; i < 120; i++) {
+    let star = document.createElement('div');
+    star.classList.add('star');
+      star.style.top = Math.random() * 100 + "%";
+      star.style.left = Math.random() * 100 + "%";
+      star.style.animationDuration = (2 + Math.random() * 3) + "s";
+    starsContainer.appendChild(star);
+    }
+</script>
+</body>
+</html>
