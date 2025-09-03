@@ -8,8 +8,8 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', Arial, sans-serif;
-      background: #fffdfd;
-      color: #ffffff;
+      background: radial-gradient(1200px 600px at 10% 0%, #0f1320 10%, #0b0f1a 55%, #0a0d17 100%);
+      color: #eef3ff;
       min-height: 100vh;
       overflow-x: hidden;
       position: relative;
@@ -53,7 +53,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 18px;
-      background: rgba(24,28,36,0.82);
+      background: rgba(16, 20, 30, 0.78);
       border-radius: 0 0 20px 20px;
       padding: 18px 40px;
     }
@@ -76,21 +76,22 @@
     }
     @keyframes spin { to { transform: rotate(1turn); } }
     nav a {
-      color: #fff;
+      color: #e1e7ff;
       text-decoration: none;
       padding: 10px 18px;
       border-radius: 999px;
       border: 1px solid transparent;
       font-weight: 500;
-      transition: background 0.2s, color 0.2s, border 0.2s;
+      transition: background 0.2s, color 0.2s, border 0.2s, transform 0.15s ease;
     }
     nav a:hover, nav .btn:hover {
       background: #fff;
-      color: #2b5876;
+      color: #1d3557;
       border-color: #fff;
+      transform: translateY(-1px);
     }
     nav .btn {
-      background: #2b5876;
+      background: linear-gradient(90deg, #2b5876 0%, #4e4376 100%);
       color: #fff;
       border: 1.5px solid #fff;
       font-weight: 600;
@@ -118,16 +119,16 @@
       to { opacity: 1; transform: translateX(0);}
     }
     .hero h1 {
-      font-size: 3.8em;
+      font-size: 3.4em;
       margin-bottom: 18px;
       letter-spacing: 1px;
-      color: #ffffff;
+      color: #f5f8ff;
       text-shadow: 0 2px 12px #ededed55;
     }
     .hero p {
       font-size: 1.2em;
       margin-bottom: 28px;
-      color: #ffffff;
+      color: #d9e3ff;
     }
     .hero-actions a {
       display: inline-block;
@@ -187,7 +188,7 @@
     section p {
       text-align: center;
       font-size: 1.1em;
-      color: #e0eafc;
+      color: #cfdaf7;
       max-width: 800px;
       margin: 0 auto 32px auto;
       line-height: 1.6em;
@@ -199,7 +200,7 @@
       margin-top: 24px;
     }
     .feature-card {
-      background: rgba(36, 44, 66, 0.95);
+      background: rgba(36, 44, 66, 0.92);
       border-radius: 16px;
       padding: 28px 22px;
       box-shadow: 0 4px 24px #2b587633;
@@ -237,7 +238,7 @@
       margin-top: 24px;
     }
     .stat-box {
-      background: rgba(255,255,255,0.10);
+      background: rgba(255,255,255,0.08);
       border-radius: 12px;
       padding: 18px 32px;
       text-align: center;
@@ -264,7 +265,7 @@
       margin-top: 24px;
     }
     .team-card {
-      background: rgba(36, 44, 66, 0.95);
+      background: rgba(36, 44, 66, 0.92);
       border-radius: 16px;
       padding: 24px 18px;
       text-align: center;
@@ -319,10 +320,10 @@
         <span>Urban Traffic<span style="font-weight:400"> • Sustainability</span></span>
       </div>
       <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="config.html">Features</a>
-        <a href="login.html">Login</a>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+        <a href="/config">Features</a>
+        <a href="/login">Login</a>
       </nav>
     </div>
   </header>
@@ -341,6 +342,8 @@
     <div class="hero-actions">
       <a href="#features">Explore Features</a>
       <a href="#stats">See Stats</a>
+      <a href="/predict/density">Predict Density</a>
+      <a href="/predict/incident">Predict Incident</a>
     </div>
   </div>
   <img class="hero-img" src="https://images.pexels.com/photos/1600757/pexels-photo-1600757.jpeg" alt="Futuristic City Traffic">
